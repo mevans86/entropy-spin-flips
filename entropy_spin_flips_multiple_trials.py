@@ -24,14 +24,14 @@ def count_spins_string(spins):
 
 # Main
 spins = []
-for i in range(20):
+for i in range(50):
 	spins.append(1)
 
 print("↑\t↓")
 print(count_spins_string(spins))
 
 for x in range(500):
-	for s in range(20):
+	for s in range(len(spins)):
 		if random.random() > 0.5:
 			spins[s] = spins[s] * -1
 	print(count_spins_string(spins))
